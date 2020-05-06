@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container" align='center'>
+      <h1>Add Item Form</h1>
+      <form  method="post">
+        {{form.as_p}}
+        {%csrf_token%}
+        <input type="submit" name="" value="Add Item">
+      </form><br><br><br>
+      <a class="btn btn-primary btn-lg" href="/display" role="button">Display ITEMS</a>
+    </div>
+  </body>
+</html>

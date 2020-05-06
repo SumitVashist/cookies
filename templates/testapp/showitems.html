@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Total Cookies Information:</h1>
+    {%if request.COOKIES %}
+    <table border=2>
+      <thead>
+        <th>Cookie Name</th>
+        <th>Cookie Value</th>
+      </thead>
+
+      {% for key,value in request.COOKIES.items %}
+      <tr>
+        <td>{{key}}</td>
+        <td>{{value}}</td>
+      </tr>
+      {% endfor %}
+      </table>
+     {%else%}
+     <p>Cookie Information is not available</p>
+    {%endif%}
+</body>
+</html>
